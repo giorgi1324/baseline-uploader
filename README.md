@@ -10,9 +10,9 @@ Current version uses Python 3.6.2 and wxPython 4.0.0b2.
 Assuming you already have Python 3 set up correctly your system,
 following commands will set up your dev system:
 
-`pip install -U wxPython psutil`
+`$ pip install -U wxPython psutil`
 
 Following command will run the program:
 
-`python app.py`
+`$ python app.py`
 
