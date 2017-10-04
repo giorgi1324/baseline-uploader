@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import baseline_auth
 import wx
 import wx.adv
 
@@ -23,6 +24,7 @@ class TaskBarIcon(wx.adv.TaskBarIcon):
     def CreatePopupMenu(self):
         menu = wx.Menu()
         create_menu_item(menu, 'Say Hello', self.on_hello)
+        create_menu_item(menu, 'Sign In', self.on_signin)
         menu.AppendSeparator()
         create_menu_item(menu, 'Exit', self.on_exit)
         return menu
@@ -35,6 +37,10 @@ class TaskBarIcon(wx.adv.TaskBarIcon):
 
     def on_hello(self, event):
         print('Hello, world!')
+
+    def on_signin(self, event):
+        print('Signing in...')
+        baseline_auth.startAuth()
 
     def on_exit(self, event):
         wx.CallAfter(self.Destroy)
