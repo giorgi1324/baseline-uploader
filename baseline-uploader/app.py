@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+
 import wx
 import wx.adv
 
 TRAY_TOOLTIP = 'System Tray Demo'
-TRAY_ICON = 'favicon.ico'
+TRAY_ICON = 'res/favicon.ico'
 
 
 def create_menu_item(menu, label, func):
